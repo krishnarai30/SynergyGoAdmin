@@ -9,4 +9,18 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="sd_dtu.synergygoadmin.PreviousAllotDetails">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/firselect" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/agentlv"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:choiceMode="singleChoice"
+        android:layout_marginTop="20dp" />
 </RelativeLayout>

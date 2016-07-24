@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".MenuActivity" />
         <activity android:name=".NewAllotAct" />
-        <activity android:name=".PreviousAllotDetails"></activity>
+        <activity android:name=".PreviousAllotDetails" />
+        <activity android:name=".DetailsAct"></activity>
     </application>
 
 </manifest>
