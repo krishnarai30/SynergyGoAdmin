@@ -83,7 +83,7 @@
             android:layout_height="wrap_content"
             android:text="EDIT"
             android:id="@+id/alloactebtn"
-            android:onClick="onClickallocate"
+            android:onClick="onClickEditfinal"
             android:layout_below="@+id/elandmarket"
             android:layout_centerHorizontal="true" />
 
