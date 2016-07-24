@@ -18,7 +18,8 @@
         <activity android:name=".MenuActivity" />
         <activity android:name=".NewAllotAct" />
         <activity android:name=".PreviousAllotDetails" />
-        <activity android:name=".DetailsAct"></activity>
+        <activity android:name=".DetailsAct" />
+        <activity android:name=".EditActivity"></activity>
     </application>
 
 </manifest>

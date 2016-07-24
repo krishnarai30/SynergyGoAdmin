@@ -43,14 +43,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Large Text "
+                        android:text="Agent ID"
                         android:id="@+id/textView10" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Large Text"
+                        android:text="NULL"
                         android:id="@+id/textView11" />
                 </TableRow>
 
@@ -79,14 +79,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Large Text"
+                        android:text="File No."
                         android:id="@+id/textView14" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Large Text"
+                        android:text="NULL"
                         android:id="@+id/textView15" />
                 </TableRow>
 
@@ -115,14 +115,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Large Text"
+                        android:text="Applicant Name"
                         android:id="@+id/textView18" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Large Text"
+                        android:text="NULL"
                         android:id="@+id/textView19" />
                 </TableRow>
 
@@ -151,14 +151,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Large Text"
-                        android:id="@+id/textView22" />
+                        android:id="@+id/textView22"
+                        android:text="Contact Primary" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Large Text"
+                        android:text="NULL"
                         android:id="@+id/textView23" />
                 </TableRow>
 
@@ -187,14 +187,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Large Text"
+                        android:text="Contact Secondary  "
                         android:id="@+id/textView26" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Large Text"
+                        android:text="NULL"
                         android:id="@+id/textView27" />
                 </TableRow>
 
@@ -223,14 +223,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Large Text"
+                        android:text="Address"
                         android:id="@+id/textView30" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Large Text"
+                        android:text="NULL"
                         android:id="@+id/textView31" />
                 </TableRow>
 
@@ -259,15 +259,50 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Large Text"
+                        android:text="Landmark"
                         android:id="@+id/textView34" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Large Text"
+                        android:text="NULL"
                         android:id="@+id/textView35" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/textView36" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/textView37" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/textView38" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EDIT"
+                        android:id="@+id/editbtn"
+                        android:onClick="onClickEdit" />
                 </TableRow>
             </TableLayout>
         </LinearLayout>
