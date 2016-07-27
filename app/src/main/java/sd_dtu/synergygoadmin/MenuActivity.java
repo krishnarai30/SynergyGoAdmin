@@ -21,4 +21,8 @@ public class MenuActivity extends AppCompatActivity {
         Intent intent=new Intent(MenuActivity.this,PreviousAllotDetails.class);
         startActivity(intent);
     }
+    public void onClickRegAgent(View view){
+        Intent intent=new Intent(MenuActivity.this,RegisterNewAgent.class);
+        startActivity(intent);
+    }
 }

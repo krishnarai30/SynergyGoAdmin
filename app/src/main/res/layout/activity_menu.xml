@@ -24,9 +24,18 @@
         android:layout_height="wrap_content"
         android:text="PREVIOUS ALLOTMENT DETAILS"
         android:id="@+id/prevalbtn"
-        android:layout_marginBottom="144dp"
+        android:onClick="onClickprev"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="register new agent"
+        android:id="@+id/newagentbtn"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="onClickprev" />
+        android:layout_marginBottom="83dp"
+        android:onClick="onClickRegAgent" />
 
 </RelativeLayout>

@@ -19,7 +19,8 @@
         <activity android:name=".NewAllotAct" />
         <activity android:name=".PreviousAllotDetails" />
         <activity android:name=".DetailsAct" />
-        <activity android:name=".EditActivity"></activity>
+        <activity android:name=".EditActivity" />
+        <activity android:name=".RegisterNewAgent"></activity>
     </application>
 
 </manifest>
