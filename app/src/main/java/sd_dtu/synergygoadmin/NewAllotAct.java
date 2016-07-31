@@ -12,8 +12,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class NewAllotAct extends AppCompatActivity {
-    EditText fileet,applicantet,contactpet,contactset,addet,landmarket,agentidet;
-    String file,applicant,contactp,contacts,add,landmark,agentid;
+    EditText fileet,applicantet,contactpet,contactset,addet,landmarket,agentidet,addtype;
+    String file,applicant,contactp,contacts,add,landmark,agentid,stringaddtype;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +24,8 @@ public class NewAllotAct extends AppCompatActivity {
         DatabaseReference mDatabase;
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
+
+        addtype=(EditText)findViewById(R.id.addtypeet);
         agentidet=(EditText)findViewById(R.id.Agentidet);
         fileet=(EditText)findViewById(R.id.efilenoet);
         applicantet=(EditText)findViewById(R.id.nameet);
@@ -39,6 +41,7 @@ public class NewAllotAct extends AppCompatActivity {
         contacts=contactset.getText().toString().trim();
         add=addet.getText().toString();
         landmark=landmarket.getText().toString().trim();
+        stringaddtype=addtype.getText().toString().trim();
 
         if(TextUtils.isEmpty(agentid)){
             Toast.makeText(this,"Please enter Agent ID",Toast.LENGTH_LONG).show();
@@ -72,13 +75,18 @@ public class NewAllotAct extends AppCompatActivity {
             Toast.makeText(this,"Please enter Landmark",Toast.LENGTH_LONG).show();
             return;
         }
-
+        if(TextUtils.isEmpty(stringaddtype)){
+            Toast.makeText(this,"Please enter Address Type",Toast.LENGTH_LONG).show();
+            return;
+        }
+        mDatabase.child(file).child("Address Type").setValue(stringaddtype);
         mDatabase.child(file).child("Agent ID").setValue(agentid);
         mDatabase.child(file).child("Applicant's name").setValue(applicant);
         mDatabase.child(file).child("Contact Primary").setValue(contactp);
         mDatabase.child(file).child("Contact Secondary").setValue(contacts);
         mDatabase.child(file).child("Address").setValue(add);
         mDatabase.child(file).child("Landmark").setValue(landmark);
+
 
 
 
