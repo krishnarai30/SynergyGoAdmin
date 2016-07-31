@@ -79,13 +79,15 @@ public class NewAllotAct extends AppCompatActivity {
             Toast.makeText(this,"Please enter Address Type",Toast.LENGTH_LONG).show();
             return;
         }
-        mDatabase.child(file).child("Address Type").setValue(stringaddtype);
-        mDatabase.child(file).child("Agent ID").setValue(agentid);
-        mDatabase.child(file).child("Applicant's name").setValue(applicant);
-        mDatabase.child(file).child("Contact Primary").setValue(contactp);
-        mDatabase.child(file).child("Contact Secondary").setValue(contacts);
-        mDatabase.child(file).child("Address").setValue(add);
-        mDatabase.child(file).child("Landmark").setValue(landmark);
+        mDatabase.child("file").child(file).child("Address Type").setValue(stringaddtype);
+        mDatabase.child("file").child(file).child("Agent ID").setValue(agentid);
+        mDatabase.child("file").child(file).child("Applicant's name").setValue(applicant);
+        mDatabase.child("file").child(file).child("Contact Primary").setValue(contactp);
+        mDatabase.child("file").child(file).child("Contact Secondary").setValue(contacts);
+        mDatabase.child("file").child(file).child("Address").setValue(add);
+        mDatabase.child("file").child(file).child("Landmark").setValue(landmark);
+        mDatabase.child("file").child(file).child("Landmark").setValue(landmark);
+        mDatabase.child("file").child(file).child("File").setValue(file);
 
 
 
