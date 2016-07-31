@@ -8,8 +8,12 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="sd_dtu.synergygoadmin.NewAllotAct">
-
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -75,15 +79,6 @@
         android:layout_alignLeft="@+id/textView5"
         android:layout_alignStart="@+id/textView5"
         android:layout_marginTop="32dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Allocate"
-        android:id="@+id/alloactebtn"
-        android:onClick="onClickallocate"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -191,6 +186,17 @@
         android:layout_alignRight="@+id/elandmarket"
         android:layout_alignEnd="@+id/elandmarket"
         android:hint="Address Type" />
+</RelativeLayout>
+</ScrollView>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Allocate"
+        android:id="@+id/alloactebtn"
+        android:onClick="onClickallocate"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp" />
 </RelativeLayout>
 
