@@ -13,23 +13,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Agent Name  "
-        android:id="@+id/textView39"
-        android:layout_marginTop="164dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/textView41"
-        android:layout_alignStart="@+id/textView41" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Agent ID"
+        android:text="Agent Email ID"
         android:id="@+id/textView40"
-        android:layout_marginTop="45dp"
-        android:layout_below="@+id/textView39"
-        android:layout_alignLeft="@+id/textView39"
-        android:layout_alignStart="@+id/textView39" />
+        android:layout_above="@+id/agentpassreget"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="69dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,45 +26,27 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Password"
         android:id="@+id/textView41"
-        android:layout_marginTop="54dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_below="@+id/textView40"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/agentnamereget"
-        android:layout_alignTop="@+id/textView39"
-        android:layout_toRightOf="@+id/textView39"
-        android:layout_toEndOf="@+id/textView39"
-        android:hint="Agent Name" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/agentidreget"
+        android:id="@+id/agentemailidreget"
+        android:hint="Agent Email ID"
         android:layout_alignTop="@+id/textView40"
-        android:layout_alignLeft="@+id/agentnamereget"
-        android:layout_alignStart="@+id/agentnamereget"
-        android:layout_alignRight="@+id/agentnamereget"
-        android:layout_alignEnd="@+id/agentnamereget"
-        android:hint="Agent ID" />
+        android:layout_toRightOf="@+id/registerfnlbtn"
+        android:layout_toEndOf="@+id/registerfnlbtn" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/agentpassreget"
+        android:hint="Password"
         android:layout_alignTop="@+id/textView41"
-        android:layout_alignLeft="@+id/agentidreget"
-        android:layout_alignStart="@+id/agentidreget"
-        android:layout_alignRight="@+id/agentnamereget"
-        android:layout_alignEnd="@+id/agentnamereget"
-        android:hint="Password" />
+        android:layout_alignLeft="@+id/agentemailidreget"
+        android:layout_alignStart="@+id/agentemailidreget" />
 
     <Button
         android:layout_width="wrap_content"
