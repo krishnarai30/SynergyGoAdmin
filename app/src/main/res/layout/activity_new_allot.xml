@@ -185,16 +185,14 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <EditText
+    <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/addtypeet"
-        android:layout_below="@+id/elandmarket"
-        android:layout_alignLeft="@+id/elandmarket"
-        android:layout_alignStart="@+id/elandmarket"
-        android:layout_alignRight="@+id/elandmarket"
-        android:layout_alignEnd="@+id/elandmarket"
-        android:hint="Address Type" />
+        android:id="@+id/addtypspinner"
+        android:layout_alignTop="@+id/textView39"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_toEndOf="@+id/textView4" />
+
 </RelativeLayout>
 
 </RelativeLayout>

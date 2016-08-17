@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Synergy Go Admin</string>
-
+    <string name="count">0</string>
     <string-array name="add_type">
         <item>OFFICE</item>
         <item>RESEDENTIAL</item>
+        <item>BUSINESS</item>
     </string-array>
 </resources>
