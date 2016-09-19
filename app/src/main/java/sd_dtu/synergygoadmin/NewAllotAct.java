@@ -124,14 +124,14 @@ public class NewAllotAct extends AppCompatActivity {
         editor.putInt("selection-start", i);
         editor.apply();
         x=Integer.toString(i);
-        mDatabase.child("file").child(x).child("Address Type").setValue(stringaddtype);
-        mDatabase.child("file").child(x).child("Agent ID").setValue(agentid);
-        mDatabase.child("file").child(x).child("Applicant's name").setValue(applicant);
-        mDatabase.child("file").child(x).child("Contact Primary").setValue(contactp);
-        mDatabase.child("file").child(x).child("Contact Secondary").setValue(contacts);
-        mDatabase.child("file").child(x).child("Address").setValue(add);
-        mDatabase.child("file").child(x).child("Landmark").setValue(landmark);
-        mDatabase.child("file").child(x).child("File").setValue(file);
+        mDatabase.child("file").child(agentid).child(x).child("Address Type").setValue(stringaddtype);
+        mDatabase.child("file").child(agentid).child(x).child("Agent ID").setValue(agentid);
+        mDatabase.child("file").child(agentid).child(x).child("Applicant's name").setValue(applicant);
+        mDatabase.child("file").child(agentid).child(x).child("Contact Primary").setValue(contactp);
+        mDatabase.child("file").child(agentid).child(x).child("Contact Secondary").setValue(contacts);
+        mDatabase.child("file").child(agentid).child(x).child("Address").setValue(add);
+        mDatabase.child("file").child(agentid).child(x).child("Landmark").setValue(landmark);
+        mDatabase.child("file").child(agentid).child(x).child("File").setValue(file);
 
 
 
