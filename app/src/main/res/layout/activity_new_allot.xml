@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="sd_dtu.synergygoadmin.NewAllotAct"
-    android:background="@color/colorBG1">
+    android:background="#bbda87">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,105 +24,198 @@
                 android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true">
-                <EditText
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:id="@+id/efilenoet"
-                    android:layout_marginBottom="8dp"
-                    android:hint="File No."
-                    android:background="@drawable/rounded_edit_text"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="8dp"
-                    />
-
-                <EditText
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:hint="File No."
+                        android:inputType="number"
+                        android:id="@+id/efilenoet"
+                        android:textColor="#000"
+                        android:textColorHint="@android:color/white" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:id="@+id/nameet"
-                    android:layout_marginBottom="8dp"
-                    android:hint="Applicant Name"
-                    android:background="@drawable/rounded_edit_text"                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="8dp"
-                    />
-
-                <EditText
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Applicant Name"
+                        android:inputType="textPersonName"
+                        android:id="@+id/nameet"
+                        android:textColor="#000"
+                        android:textColorHint="@android:color/white" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="phone"
-                    android:id="@+id/econtactpet"
-                    android:hint="Contact(Primary)"
-
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/rounded_edit_text"                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="8dp"
-                    />
-
-                <EditText
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Contact(Primary)"
+                        android:inputType="number"
+                        android:id="@+id/econtactpet"
+                        android:textColor="#000"
+                        android:textColorHint="@android:color/white" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="phone"
-                    android:id="@+id/econtactset"
-                    android:hint="Contact(Secondary)"
-
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/rounded_edit_text"                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="8dp"
-                    />
-
-                <EditText
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Contact(Secondary)"
+                        android:inputType="number"
+                        android:id="@+id/econtactset"
+                        android:textColor="#000"
+                        android:textColorHint="@android:color/white" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPostalAddress"
-                    android:id="@+id/eaddet"
-                    android:hint="Address"
-
-                    android:layout_marginBottom="8dp"
-
-                    android:background="@drawable/rounded_edit_text"                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="8dp"
-                    />
-
-                <EditText
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Address"
+                        android:gravity="top"
+                        android:inputType="textPersonName"
+                        android:id="@+id/eaddet"
+                        android:textColor="#000"
+                        android:textColorHint="@android:color/white" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/elandmarket"
-                    android:hint="Landmark"
-
-                    android:layout_marginBottom="8dp"
-
-                    android:background="@drawable/rounded_edit_text"                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="8dp"
-                    />
-
-
-                <EditText
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Landmark"
+                        android:inputType="textPersonName"
+                        android:id="@+id/elandmarket"
+                        android:textColor="#000"
+                        android:textColorHint="@android:color/white" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
-                    android:id="@+id/Agentidet"
-                    android:hint="Agent ID"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Agent ID"
+                        android:inputType="textPersonName"
+                        android:id="@+id/Agentidet"
+                        android:textColor="#000"
+                        android:textColorHint="@android:color/white" />
+                </android.support.design.widget.TextInputLayout>
 
-                    android:layout_marginBottom="8dp"
+                <!--<EditText-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:inputType="number"-->
+                    <!--android:id="@+id/efilenoet"-->
+                    <!--android:layout_marginBottom="8dp"-->
+                    <!--android:hint="File No."-->
+                    <!--android:background="@drawable/rounded_edit_text"-->
+                    <!--android:paddingTop="8dp"-->
+                    <!--android:paddingBottom="8dp"-->
+                    <!--android:paddingLeft="16dp"-->
+                    <!--android:paddingRight="8dp"-->
+                    <!--/>-->
 
-                    android:background="@drawable/rounded_edit_text"                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="8dp"
-                    />
+                <!--<EditText-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:inputType="textPersonName"-->
+                    <!--android:id="@+id/nameet"-->
+                    <!--android:layout_marginBottom="8dp"-->
+                    <!--android:hint="Applicant Name"-->
+                    <!--android:background="@drawable/rounded_edit_text"                    android:paddingTop="8dp"-->
+                    <!--android:paddingBottom="8dp"-->
+                    <!--android:paddingLeft="16dp"-->
+                    <!--android:paddingRight="8dp"-->
+                    <!--/>-->
+
+                <!--<EditText-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:inputType="phone"-->
+                    <!--android:id="@+id/econtactpet"-->
+                    <!--android:hint="Contact(Primary)"-->
+
+                    <!--android:layout_marginBottom="8dp"-->
+                    <!--android:background="@drawable/rounded_edit_text"                    android:paddingTop="8dp"-->
+                    <!--android:paddingBottom="8dp"-->
+                    <!--android:paddingLeft="16dp"-->
+                    <!--android:paddingRight="8dp"-->
+                    <!--/>-->
+
+                <!--<EditText-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:inputType="phone"-->
+                    <!--android:id="@+id/econtactset"-->
+                    <!--android:hint="Contact(Secondary)"-->
+
+                    <!--android:layout_marginBottom="8dp"-->
+                    <!--android:background="@drawable/rounded_edit_text"                    android:paddingTop="8dp"-->
+                    <!--android:paddingBottom="8dp"-->
+                    <!--android:paddingLeft="16dp"-->
+                    <!--android:paddingRight="8dp"-->
+                    <!--/>-->
+
+                <!--<EditText-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:inputType="textPostalAddress"-->
+                    <!--android:id="@+id/eaddet"-->
+                    <!--android:hint="Address"-->
+
+                    <!--android:layout_marginBottom="8dp"-->
+
+                    <!--android:background="@drawable/rounded_edit_text"                    android:paddingTop="8dp"-->
+                    <!--android:paddingBottom="8dp"-->
+                    <!--android:paddingLeft="16dp"-->
+                    <!--android:paddingRight="8dp"-->
+                    <!--/>-->
+
+                <!--<EditText-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/elandmarket"-->
+                    <!--android:hint="Landmark"-->
+
+                    <!--android:layout_marginBottom="8dp"-->
+
+                    <!--android:background="@drawable/rounded_edit_text"                    android:paddingTop="8dp"-->
+                    <!--android:paddingBottom="8dp"-->
+                    <!--android:paddingLeft="16dp"-->
+                    <!--android:paddingRight="8dp"-->
+                    <!--/>-->
+
+
+                <!--<EditText-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:inputType="textEmailAddress"-->
+                    <!--android:id="@+id/Agentidet"-->
+                    <!--android:hint="Agent ID"-->
+
+                    <!--android:layout_marginBottom="8dp"-->
+
+                    <!--android:background="@drawable/rounded_edit_text"                    android:paddingTop="8dp"-->
+                    <!--android:paddingBottom="8dp"-->
+                    <!--android:paddingLeft="16dp"-->
+                    <!--android:paddingRight="8dp"-->
+                    <!--/>-->
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -166,10 +259,11 @@
                     android:text="Allocate"
                     android:id="@+id/alloactebtn"
                     android:onClick="onClickallocate"
-
+                    android:background="#6e8e3a"
                     android:layout_marginTop="24dp"
-                    android:background="@drawable/roundedbutton"
                     android:textSize="16dp"
+                    android:textColor="@color/coloryellow"
+                    android:elevation="8dp"
                     style="?android:attr/borderlessButtonStyle"
                     />
 
@@ -178,5 +272,5 @@
 
     </ScrollView>
 
-</RelativeLayout>
+</LinearLayout>
 

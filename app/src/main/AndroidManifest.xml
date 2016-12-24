@@ -3,6 +3,8 @@
     package="sd_dtu.synergygoadmin">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission  android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,11 +19,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".MenuActivity" />
-        <activity android:name=".NewAllotAct" />
+        <activity android:name=".NewAllotAct"
+            android:theme="@style/AppTheme2"
+            />
         <activity android:name=".PreviousAllotDetails" />
         <activity android:name=".DetailsAct" />
         <activity android:name=".EditActivity" />
-        <activity android:name=".RegisterNewAgent"></activity>
+        <activity android:name=".RegisterNewAgent"
+            android:theme="@style/AppTheme1"
+            ></activity>
     </application>
 
 </manifest>

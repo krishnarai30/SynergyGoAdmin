@@ -26,7 +26,6 @@
         android:text="PREVIOUS ALLOTMENT DETAILS"
         android:id="@+id/prevalbtn"
         android:onClick="onClickprev"
-        android:enabled="false"
 
         android:background="#FF7A5A"
         android:textColor="#fff"
@@ -41,7 +40,6 @@
         android:text="register new agent"
         android:id="@+id/newagentbtn"
         android:onClick="onClickRegAgent"
-        android:enabled="false"
 
         android:background="#00AAA0"
         android:textSize="24dp"
