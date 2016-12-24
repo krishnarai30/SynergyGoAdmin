@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="sd_dtu.synergygoadmin">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission  android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -19,15 +20,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".MenuActivity" />
-        <activity android:name=".NewAllotAct"
-            android:theme="@style/AppTheme2"
-            />
+        <activity
+            android:name=".NewAllotAct"
+            android:theme="@style/AppTheme2" />
         <activity android:name=".PreviousAllotDetails" />
         <activity android:name=".DetailsAct" />
         <activity android:name=".EditActivity" />
-        <activity android:name=".RegisterNewAgent"
-            android:theme="@style/AppTheme1"
-            ></activity>
+        <activity
+            android:name=".RegisterNewAgent"
+            android:theme="@style/AppTheme1" />
+        <activity android:name=".AgentActivity"></activity>
     </application>
 
 </manifest>
