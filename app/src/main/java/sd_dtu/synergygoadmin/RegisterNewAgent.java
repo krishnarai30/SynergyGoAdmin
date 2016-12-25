@@ -38,7 +38,7 @@ public class RegisterNewAgent extends AppCompatActivity {
 
         if(isNetworkAvailable(getApplicationContext())) {
 
-            firebaseAuth = FirebaseAuth.getInstance();
+            //firebaseAuth = FirebaseAuth.getInstance();
             emailet = (EditText) findViewById(R.id.agentemailidreget);
             passet = (EditText) findViewById(R.id.agentpassreget);
 

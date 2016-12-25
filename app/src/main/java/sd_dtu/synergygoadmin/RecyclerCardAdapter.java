@@ -3,6 +3,7 @@ package sd_dtu.synergygoadmin;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,7 +43,7 @@ public class RecyclerCardAdapter extends RecyclerView.Adapter<RecyclerCardAdapte
         holder.textView6.setText(cardData.getPcontact());
         holder.textView7.setText(cardData.getScontact());
         holder.textView8.setText(cardData.getAgentid());
-
+        holder.textView9.setText(cardData.getUniid());
     }
 
 
@@ -53,7 +54,7 @@ public class RecyclerCardAdapter extends RecyclerView.Adapter<RecyclerCardAdapte
 
     public static class RecycViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        TextView textView1,textView2,textView3,textView4,textView5,textView6,textView7,textView8;
+        TextView textView1,textView2,textView3,textView4,textView5,textView6,textView7,textView8,textView9;
         Context context;
         ArrayList<CardData> data = new ArrayList<CardData>();
         String s;
@@ -62,7 +63,6 @@ public class RecyclerCardAdapter extends RecyclerView.Adapter<RecyclerCardAdapte
             super(itemView);
             this.data = data;
             this.context = context;
-            textView8 = (TextView)itemView.findViewById(R.id.age);
             textView1 = (TextView) itemView.findViewById(R.id.name);
             textView2 = (TextView) itemView.findViewById(R.id.file_no);
             textView3 = (TextView) itemView.findViewById(R.id.add_type);
@@ -70,6 +70,8 @@ public class RecyclerCardAdapter extends RecyclerView.Adapter<RecyclerCardAdapte
             textView5 = (TextView) itemView.findViewById(R.id.land_mark);
             textView6 = (TextView) itemView.findViewById(R.id.p_contact);
             textView7 = (TextView) itemView.findViewById(R.id.s_contact);
+            textView8 = (TextView)itemView.findViewById(R.id.age);
+            textView9 = (TextView)itemView.findViewById(R.id.uniid);
             itemView.setOnClickListener(this);
         }
 
@@ -86,7 +88,9 @@ public class RecyclerCardAdapter extends RecyclerView.Adapter<RecyclerCardAdapte
             intent.putExtra("pcontact",textView6.getText().toString());
             intent.putExtra("scontact",textView7.getText().toString());
             intent.putExtra("agentid",textView8.getText().toString());
-
+            intent.putExtra("uniid",textView9.getText().toString().trim());
+            Log.d("AgentAdap",textView8.getText().toString());
+            Log.d("UniqueAdap",textView9.getText().toString());
             context.startActivity(intent);
 
         }
