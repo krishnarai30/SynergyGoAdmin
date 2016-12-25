@@ -7,6 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#c2e0f4"
     tools:context="sd_dtu.synergygoadmin.NewAllotAct">
 
     <RelativeLayout
@@ -19,7 +20,7 @@
             android:text="File No."
             android:id="@+id/textView"
             android:layout_marginTop="30dp"
-            android:layout_below="@+id/textView7"
+            android:textColor="#143c57"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
@@ -81,7 +82,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="EDIT"
+            android:text="Submit"
             android:id="@+id/alloactebtn"
             android:onClick="onClickEditfinal"
             android:layout_below="@+id/elandmarket"
@@ -146,26 +147,26 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Agent ID"
-            android:id="@+id/textView7"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+            <!--android:text="Agent ID"-->
+            <!--android:id="@+id/textView7"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true" />-->
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/eagentspinner"
-            android:layout_alignParentTop="true"
-            android:layout_alignLeft="@+id/efilenoet"
-            android:layout_alignStart="@+id/efilenoet"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_above="@+id/textView" />
+        <!--<Spinner-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/eagentspinner"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_alignLeft="@+id/efilenoet"-->
+            <!--android:layout_alignStart="@+id/efilenoet"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_above="@+id/textView" />-->
 
     </RelativeLayout>
 </ScrollView>

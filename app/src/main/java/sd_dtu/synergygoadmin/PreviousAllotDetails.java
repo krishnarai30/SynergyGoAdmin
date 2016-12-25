@@ -38,7 +38,9 @@ public class PreviousAllotDetails extends AppCompatActivity {
         setContentView(R.layout.activity_previous_allot_details);
         //final ListView agentlv=(ListView)findViewById(R.id.agentlv);
 
+        getSupportActionBar().setTitle("Select an Agent");
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+
         final ProgressDialog progressDialog=new ProgressDialog(this);
         progressDialog.setMessage("Wait...");
         progressDialog.show();

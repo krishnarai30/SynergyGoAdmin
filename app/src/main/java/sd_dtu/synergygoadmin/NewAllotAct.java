@@ -19,12 +19,16 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class NewAllotAct extends AppCompatActivity {
     EditText fileet,applicantet,contactpet,contactset,addet,landmarket,agentidet;
@@ -62,13 +66,13 @@ public class NewAllotAct extends AppCompatActivity {
                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                     switch (i) {
                         case 0:
-                            stringaddtype = "Office";
+                            stringaddtype = "OFFICE";
                             break;
                         case 1:
-                            stringaddtype = "Residence";
+                            stringaddtype = "RESIDENTIAL";
                             break;
                         case 2:
-                            stringaddtype = " Business";
+                            stringaddtype = " BUSINESS";
                     }
                 }
 
@@ -132,6 +136,37 @@ public class NewAllotAct extends AppCompatActivity {
             editor.putInt("selection-start", i);
             editor.apply();
             x = Integer.toString(i);
+
+//            int j;
+//
+//            final ArrayList<String> agent = new ArrayList<String>();
+//
+//            mDatabase.child("file").addValueEventListener(new ValueEventListener() {
+//                @Override
+//                public void onDataChange(DataSnapshot dataSnapshot) {
+//                    for(DataSnapshot file : dataSnapshot.getChildren())
+//                    {
+//                        //agent.add(file.getValue(String.class));
+//                        if(agentid.equals(file.getValue(String.class)))
+//                        {
+//                            j = f
+//                        }
+//                    }
+//
+//                    for(int i = 0;i<agent.size();i++) {
+//                        if(agentid.equals(agent.get(i)))
+//                        {
+//
+//                        }
+//                    }
+//                }
+//
+//                @Override
+//                public void onCancelled(DatabaseError databaseError) {
+//
+//                }
+//            });
+
             mDatabase.child("file").child(agentid).child(x).child("Address Type").setValue(stringaddtype);
             mDatabase.child("file").child(agentid).child(x).child("Agent ID").setValue(agentid);
             mDatabase.child("file").child(agentid).child(x).child("Applicant's name").setValue(applicant);
