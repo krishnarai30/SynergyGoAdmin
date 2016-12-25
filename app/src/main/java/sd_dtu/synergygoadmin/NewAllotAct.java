@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.os.Environment;
 import android.provider.Settings;
+import android.support.annotation.IntegerRes;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -82,6 +83,10 @@ public class NewAllotAct extends AppCompatActivity {
                 }
             });
 
+            DatabaseReference mDatabase;
+            mDatabase = FirebaseDatabase.getInstance().getReference();
+
+
             agentid = agentidet.getText().toString().trim();
             file = fileet.getText().toString().trim();
             applicant = applicantet.getText().toString();
@@ -90,9 +95,41 @@ public class NewAllotAct extends AppCompatActivity {
             add = addet.getText().toString();
             landmark = landmarket.getText().toString().trim();
 
+            SharedPreferences prefs = getPreferences(MODE_PRIVATE);
+            int i = prefs.getInt("selection-start", -1);
+            i++;
+            SharedPreferences.Editor editor = getPreferences(MODE_PRIVATE).edit();
+            editor.putInt("selection-start", i);
+            editor.apply();
+            x = Integer.toString(i);
+
             if (TextUtils.isEmpty(agentid)) {
                 Toast.makeText(this, "Please enter Agent ID", Toast.LENGTH_LONG).show();
                 return;
+            }
+            else if(!TextUtils.isEmpty(agentid)){
+                mDatabase.child("AgentID").addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        for(DataSnapshot file : dataSnapshot.getChildren())
+                        {
+                            if(!agentid.equals(file.getKey().toString()))
+                            {
+                                Toast.makeText(getApplicationContext(),"AGENT ID NOT REGISTERED",Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(NewAllotAct.this,RegisterNewAgent.class);
+                                startActivity(intent);
+                                finish();
+                            }
+
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        Toast.makeText(getApplicationContext(),"Unable to contact the server",Toast.LENGTH_LONG).show();
+                    }
+                });
+
             }
 
             if (TextUtils.isEmpty(file)) {
@@ -127,45 +164,38 @@ public class NewAllotAct extends AppCompatActivity {
                 return;
             }
 
-            DatabaseReference mDatabase;
-            mDatabase = FirebaseDatabase.getInstance().getReference();
-            SharedPreferences prefs = getPreferences(MODE_PRIVATE);
-            int i = prefs.getInt("selection-start", -1);
-            i++;
-            SharedPreferences.Editor editor = getPreferences(MODE_PRIVATE).edit();
-            editor.putInt("selection-start", i);
-            editor.apply();
-            x = Integer.toString(i);
+
+
+
+            mDatabase.child("file").child(agentid).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    int k = 0;
+                    for(DataSnapshot file : dataSnapshot.getChildren()) {
+                        String s = file.getKey().toString();
+                        int n = Integer.parseInt(s);
+                        if(n>k) {
+                            k = n;
+                        }
+                        k = n+1;
+                    }
+                    x = Integer.toString(k);
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+
+
+
 
 //            int j;
 //
 //            final ArrayList<String> agent = new ArrayList<String>();
 //
-//            mDatabase.child("file").addValueEventListener(new ValueEventListener() {
-//                @Override
-//                public void onDataChange(DataSnapshot dataSnapshot) {
-//                    for(DataSnapshot file : dataSnapshot.getChildren())
-//                    {
-//                        //agent.add(file.getValue(String.class));
-//                        if(agentid.equals(file.getValue(String.class)))
-//                        {
-//                            j = f
-//                        }
-//                    }
-//
-//                    for(int i = 0;i<agent.size();i++) {
-//                        if(agentid.equals(agent.get(i)))
-//                        {
-//
-//                        }
-//                    }
-//                }
-//
-//                @Override
-//                public void onCancelled(DatabaseError databaseError) {
-//
-//                }
-//            });
+
 
             mDatabase.child("file").child(agentid).child(x).child("Address Type").setValue(stringaddtype);
             mDatabase.child("file").child(agentid).child(x).child("Agent ID").setValue(agentid);

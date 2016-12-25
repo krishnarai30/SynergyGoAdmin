@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -22,10 +23,14 @@ import java.io.InputStreamReader;
 public class MenuActivity extends AppCompatActivity {
 
 
+
+    Button prevbutton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final String PREFS_NAME = "MyPrefsFile";
+
+        prevbutton = (Button) findViewById(R.id.prevalbtn);
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 
@@ -33,10 +38,14 @@ public class MenuActivity extends AppCompatActivity {
             //the app is being launched for first time, do something
             Log.d("Comments", "First time");
 
+            prevbutton.setEnabled(false);
+
             // first time task
             SharedPreferences.Editor editor = getPreferences(MODE_PRIVATE).edit();
             editor.putInt("selection-start", 0);
             editor.apply();
+
+            prevbutton.setEnabled(true);
 
             // record the fact that the app has been started at least once
             settings.edit().putBoolean("my_first_time", false).apply();
