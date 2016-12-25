@@ -4,6 +4,7 @@
     android:id="@+id/activity_agent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#eaf1f3"
     tools:context="sd_dtu.synergygoadmin.AgentActivity">
 
     <android.support.v7.widget.RecyclerView

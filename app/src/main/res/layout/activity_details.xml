@@ -2,23 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="sd_dtu.synergygoadmin.DetailsAct"
     android:background="@color/colorBG1">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true">
 
@@ -26,201 +28,192 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp"
+                android:padding="4dp"
                 android:background="@drawable/rounded_layout">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="#fff"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Agent ID"
-                        android:id="@+id/textView10" />
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="#fff"
-
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="NULL"
-                        android:id="@+id/textView11" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
+                    android:padding="3dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/greendark"
                     android:layout_height="wrap_content">
                     <TextView
                         android:textColor="#fff"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="7dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="File No."
                         android:id="@+id/textView14" />
 
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"/>
-
                     <TextView
                         android:textColor="#fff"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="NULL"
+                        android:text="fileno"
+                        android:paddingLeft="7dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:background="#22bd79"
                         android:id="@+id/textView15" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
+                    android:layout_marginTop="4dp"
+                    android:background="#2f005d"
+                    android:padding="3dp"
                     android:layout_height="wrap_content">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#fff"
-
+                        android:paddingLeft="7dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Applicant Name"
+                        android:text="Applicant's Name"
                         android:id="@+id/textView18" />
 
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"/>
-
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="#fff"
-
+                        android:background="#a77fcd"
+                        android:paddingLeft="7dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="NULL"
+                        android:text="Name"
                         android:id="@+id/textView19" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
+                    android:padding="3dp"
+                    android:layout_marginTop="4dp"
+                    android:background="#812724"
                     android:layout_height="wrap_content">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#fff"
-
+                        android:paddingLeft="7dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:id="@+id/textView22"
                         android:text="Contact Primary" />
 
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"/>
-
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="#fff"
-
+                        android:paddingLeft="7dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:background="#c04c48"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="NULL"
+                        android:text="PrimaryContact"
                         android:id="@+id/textView23" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
+                    android:padding="3dp"
+                    android:background="#7a5216"
+                    android:layout_marginTop="4dp"
                     android:layout_height="wrap_content">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#fff"
-
+                        android:paddingLeft="7dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Contact Secondary  "
                         android:id="@+id/textView26" />
 
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"/>
-
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="#fff"
-
+                        android:background="#cc8925"
+                        android:paddingLeft="7dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="NULL"
+                        android:text="Secondary Contact"
                         android:id="@+id/textView27" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
+                    android:padding="3dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/darkblue"
                     android:layout_height="wrap_content">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#fff"
-
+                        android:paddingLeft="7dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Address"
                         android:id="@+id/textView30" />
 
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"/>
-
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="#fff"
-
+                        android:background="@color/CoolBlue"
+                        android:paddingLeft="7dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="NULL"
+                        android:text="address"
                         android:id="@+id/textView31" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
+                    android:padding="3dp"
+                    android:layout_marginTop="4dp"
+                    android:background="#2f005d"
                     android:layout_height="wrap_content">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#fff"
-
+                        android:paddingLeft="7dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Landmark"
                         android:id="@+id/textView34" />
 
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"/>
-
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="#fff"
-
+                        android:background="#a77fcd"
+                        android:paddingLeft="7dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="NULL"
+                        android:text="landmark"
                         android:id="@+id/textView35" />
                 </LinearLayout>
 
@@ -242,11 +235,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="EDIT"
+                    android:textStyle="bold"
                     android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/coloryellow"
                     android:background="@drawable/roundedbutton"
                     android:id="@+id/editbtn"
                     android:onClick="onClickEdit" />
             </LinearLayout>
         </LinearLayout>
+        </ScrollView>
     </RelativeLayout>
 </LinearLayout>

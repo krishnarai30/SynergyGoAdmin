@@ -6,9 +6,9 @@ package sd_dtu.synergygoadmin;
 
 public class CardData {
 
-    private String name,file,address,addtype,landmark,pcontact,scontact;
+    private String name,file,address,addtype,landmark,pcontact,scontact,agentid;
 
-    public CardData(String name,String file,String address,String addtype,String landmark,String pcontact,String scontact) {
+    public CardData(String name,String file,String address,String addtype,String landmark,String pcontact,String scontact,String agentid) {
         this.setAddress(address);
         this.setAddtype(addtype);
         this.setFile(file);
@@ -16,6 +16,11 @@ public class CardData {
         this.setName(name);
         this.setScontact(scontact);
         this.setPcontact(pcontact);
+        this.setAgentid(agentid);
+    }
+
+    public String getAgentid() {
+        return agentid;
     }
 
     public String getAddress() {
@@ -72,5 +77,9 @@ public class CardData {
 
     public void setScontact(String scontact) {
         this.scontact = scontact;
+    }
+
+    public void setAgentid(String agentid) {
+        this.agentid = agentid;
     }
 }

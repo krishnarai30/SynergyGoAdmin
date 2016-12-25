@@ -87,12 +87,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
                 }
             });
-            Bundle bundle = null;
-            bundle.putCharSequenceArray("array",list.toArray(new CharSequence[list.size()]));
-            bundle.putString("agent",pat);
+            //Bundle bundle = new Bundle();
+            //bundle.putCharSequenceArray("array",list.toArray(new CharSequence[list.size()]));
+            //bundle.putString("agent",pat);
 
-            Intent intent = new Intent(this.context,AgentClass.class);
-            intent.putExtra("chararray",bundle);
+            Intent intent = new Intent(this.context,AgentActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            //intent.putExtra("chararray",bundle);
+            intent.putExtra("agent",pat);
             context.startActivity(intent);
         }
     }

@@ -1,6 +1,7 @@
 package sd_dtu.synergygoadmin;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,6 +41,7 @@ public class RecyclerCardAdapter extends RecyclerView.Adapter<RecyclerCardAdapte
         holder.textView5.setText(cardData.getLandmark());
         holder.textView6.setText(cardData.getPcontact());
         holder.textView7.setText(cardData.getScontact());
+        holder.textView8.setText(cardData.getAgentid());
 
     }
 
@@ -51,14 +53,16 @@ public class RecyclerCardAdapter extends RecyclerView.Adapter<RecyclerCardAdapte
 
     public static class RecycViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        TextView textView1,textView2,textView3,textView4,textView5,textView6,textView7;
+        TextView textView1,textView2,textView3,textView4,textView5,textView6,textView7,textView8;
         Context context;
         ArrayList<CardData> data = new ArrayList<CardData>();
+        String s;
 
         public RecycViewHolder(View itemView, Context context, ArrayList<CardData> data) {
             super(itemView);
             this.data = data;
             this.context = context;
+            textView8 = (TextView)itemView.findViewById(R.id.age);
             textView1 = (TextView) itemView.findViewById(R.id.name);
             textView2 = (TextView) itemView.findViewById(R.id.file_no);
             textView3 = (TextView) itemView.findViewById(R.id.add_type);
@@ -71,6 +75,19 @@ public class RecyclerCardAdapter extends RecyclerView.Adapter<RecyclerCardAdapte
 
         @Override
         public void onClick(View view) {
+
+            Intent intent = new Intent(this.context,DetailsAct.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.putExtra("name",textView1.getText().toString());
+            intent.putExtra("fileno",textView2.getText().toString());
+            intent.putExtra("addtype",textView3.getText().toString());
+            intent.putExtra("address",textView4.getText().toString());
+            intent.putExtra("landmark",textView5.getText().toString());
+            intent.putExtra("pcontact",textView6.getText().toString());
+            intent.putExtra("scontact",textView7.getText().toString());
+            intent.putExtra("agentid",textView8.getText().toString());
+
+            context.startActivity(intent);
 
         }
     }
