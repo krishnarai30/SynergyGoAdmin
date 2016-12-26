@@ -38,14 +38,14 @@ public class MenuActivity extends AppCompatActivity {
             //the app is being launched for first time, do something
             Log.d("Comments", "First time");
 
-            prevbutton.setEnabled(false);
+//            prevbutton.setEnabled(false);
 
             // first time task
             SharedPreferences.Editor editor = getPreferences(MODE_PRIVATE).edit();
             editor.putInt("selection-start", 0);
             editor.apply();
 
-            prevbutton.setEnabled(true);
+//            prevbutton.setEnabled(true);
 
             // record the fact that the app has been started at least once
             settings.edit().putBoolean("my_first_time", false).apply();

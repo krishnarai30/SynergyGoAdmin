@@ -12,6 +12,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
@@ -111,16 +112,25 @@ public class NewAllotAct extends AppCompatActivity {
                 mDatabase.child("AgentID").addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
+                        int r = 0;
                         for(DataSnapshot file : dataSnapshot.getChildren())
                         {
-                            if(!agentid.equals(file.getKey().toString()))
+                            String s = file.getKey().toString();
+                            if((agentid.equals(s)))
                             {
-                                Toast.makeText(getApplicationContext(),"AGENT ID NOT REGISTERED",Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(NewAllotAct.this,RegisterNewAgent.class);
-                                startActivity(intent);
-                                finish();
+                                Log.d("EQUAL","IN HERE");
+                                break;
+//                                finish();
+                            } else {
+                                Log.d("NOT EQUAL","IN HERE");
+                                r=1;
                             }
-
+                        }
+                        if(r == 1) {
+                            Toast.makeText(getApplicationContext(), "AGENT ID NOT REGISTERED", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(NewAllotAct.this, RegisterNewAgent.class);
+                            startActivity(intent);
+                            finish();
                         }
                     }
 
@@ -163,8 +173,6 @@ public class NewAllotAct extends AppCompatActivity {
                 Toast.makeText(this, "Please enter Address Type", Toast.LENGTH_LONG).show();
                 return;
             }
-
-
 
 
             mDatabase.child("file").child(agentid).addValueEventListener(new ValueEventListener() {
