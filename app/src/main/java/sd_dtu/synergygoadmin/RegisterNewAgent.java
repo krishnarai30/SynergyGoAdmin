@@ -57,8 +57,8 @@ public class RegisterNewAgent extends AppCompatActivity {
             }
 
             mref = FirebaseDatabase.getInstance().getReference();
-            mref.child("AgentID").setValue(email);
-            mref.child("AgentID").child(email).setValue(pass);
+            mref.child("AgentID").child(email).setValue(email);
+            mref.child("AgentID").child(email).child("password").setValue(pass);
 
 
             Toast.makeText(getApplicationContext(), "Registered New Agent", Toast.LENGTH_SHORT).show();

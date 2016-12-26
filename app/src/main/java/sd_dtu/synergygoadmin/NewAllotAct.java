@@ -165,8 +165,6 @@ public class NewAllotAct extends AppCompatActivity {
             }
 
 
-
-
             mDatabase.child("file").child(agentid).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {

@@ -29,7 +29,7 @@ public class AgentActivity extends AppCompatActivity {
     RecyclerView.LayoutManager layoutManager;
     RecyclerView.Adapter adapter;
     DatabaseReference databaseReference;
-    DatabaseReference dbref;
+   // DatabaseReference dbref;
     String agenti;
     ArrayList<String> si = new ArrayList<String>();
     ArrayList<CardData> list = new ArrayList<CardData>();
