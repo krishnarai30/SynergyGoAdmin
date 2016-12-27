@@ -9,6 +9,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -19,11 +26,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class MenuActivity extends AppCompatActivity {
 
 
 
+    ArrayList<String> arrayList = new ArrayList<String>();
     Button prevbutton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,12 +59,31 @@ public class MenuActivity extends AppCompatActivity {
             // record the fact that the app has been started at least once
             settings.edit().putBoolean("my_first_time", false).apply();
         }
+        this.overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+
         setContentView(R.layout.activity_menu);
 
     }
 
     public void onClicknew(View view){
         Intent intent=new Intent(MenuActivity.this,NewAllotAct.class);
+//        DatabaseReference mref;
+//        mref = FirebaseDatabase.getInstance().getReference();
+//        mref.child("AgentID").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                for(DataSnapshot file : dataSnapshot.getChildren()) {
+//                    arrayList.add(file.getKey());
+//                    Log.d("id",file.getKey());
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//                Toast.makeText(getApplicationContext(),"Unable to contact the server",Toast.LENGTH_LONG).show();
+//            }
+//        });
+//        intent.putExtra("LIST",arrayList);
         startActivity(intent);
     }
     public void onClickprev(View view){

@@ -19,10 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MenuActivity" />
+        <activity android:name=".MenuActivity"
+            android:theme="@style/AppTheme3"
+            />
         <activity
             android:name=".NewAllotAct"
-            android:theme="@style/AppTheme2"
+            android:theme="@style/AppTheme3"
             android:parentActivityName=".MenuActivity"
             />
         <activity android:name=".PreviousAllotDetails"
@@ -36,11 +38,12 @@
             />
         <activity
             android:name=".RegisterNewAgent"
-            android:theme="@style/AppTheme1"
+            android:theme="@style/AppTheme3"
             android:parentActivityName=".MenuActivity"
             />
         <activity android:name=".AgentActivity"
             android:parentActivityName=".PreviousAllotDetails"
+            android:theme="@style/AppTheme3"
             ></activity>
     </application>
 

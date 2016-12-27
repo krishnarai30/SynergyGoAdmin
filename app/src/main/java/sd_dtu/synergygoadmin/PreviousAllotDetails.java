@@ -42,6 +42,7 @@ public class PreviousAllotDetails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         setContentView(R.layout.activity_previous_allot_details);
         //final ListView agentlv=(ListView)findViewById(R.id.agentlv);
 

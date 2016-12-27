@@ -78,7 +78,7 @@ public class RecyclerCardAdapter extends RecyclerView.Adapter<RecyclerCardAdapte
         @Override
         public void onClick(View view) {
 
-            Intent intent = new Intent(this.context,DetailsAct.class);
+            Intent intent = new Intent(this.context,EditActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.putExtra("name",textView1.getText().toString());
             intent.putExtra("fileno",textView2.getText().toString());

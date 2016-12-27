@@ -27,7 +27,6 @@
                         android:hint="File No."
                         android:inputType="number"
                         android:id="@+id/efileno"
-                        android:textColor="#000"
                         android:textColorHint="@android:color/white" />
                 </android.support.design.widget.TextInputLayout>
                 <android.support.design.widget.TextInputLayout
@@ -40,7 +39,6 @@
                         android:hint="Applicant Name"
                         android:inputType="textPersonName"
                         android:id="@+id/name5"
-                        android:textColor="#000"
                         android:textColorHint="@android:color/white" />
                 </android.support.design.widget.TextInputLayout>
                 <android.support.design.widget.TextInputLayout
@@ -53,7 +51,6 @@
                         android:hint="Contact(Primary)"
                         android:inputType="number"
                         android:id="@+id/econtactp"
-                        android:textColor="#000"
                         android:textColorHint="@android:color/white" />
                 </android.support.design.widget.TextInputLayout>
                 <android.support.design.widget.TextInputLayout
@@ -66,7 +63,6 @@
                         android:hint="Contact(Secondary)"
                         android:inputType="number"
                         android:id="@+id/econtacts"
-                        android:textColor="#000"
                         android:textColorHint="@android:color/white" />
                 </android.support.design.widget.TextInputLayout>
                 <android.support.design.widget.TextInputLayout
@@ -80,7 +76,6 @@
                         android:gravity="top"
                         android:inputType="textPersonName"
                         android:id="@+id/eadd"
-                        android:textColor="#000"
                         android:textColorHint="@android:color/white" />
                 </android.support.design.widget.TextInputLayout>
                 <android.support.design.widget.TextInputLayout
@@ -93,7 +88,6 @@
                         android:hint="Landmark"
                         android:inputType="textPersonName"
                         android:id="@+id/elandmark"
-                        android:textColor="#000"
                         android:textColorHint="@android:color/white" />
                 </android.support.design.widget.TextInputLayout>
                 <android.support.design.widget.TextInputLayout
@@ -106,7 +100,6 @@
                         android:hint="Agent ID"
                         android:inputType="textPersonName"
                         android:id="@+id/Agentidr"
-                        android:textColor="#000"
                         android:textColorHint="@android:color/white" />
                 </android.support.design.widget.TextInputLayout>
 
@@ -215,7 +208,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_marginBottom="8dp"
-                    android:background="@drawable/rounded_edit_text"                    android:paddingTop="8dp"
+                    android:background="#c2e0f4"
+                    android:paddingTop="8dp"
                     android:paddingBottom="8dp"
                     android:paddingLeft="16dp"
                     android:paddingRight="8dp"
@@ -226,19 +220,13 @@
                         android:text="Address Type"
                         android:textSize="20dp"
                         android:id="@+id/textView39"/>
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        />
                     <Spinner
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_weight="1"
-                        android:layout_height="wrap_content"
+                        android:layout_height="40dp"
                         android:id="@+id/addtypspin"
                         android:textSize="16dp"
                         android:padding="2dp"
-                        android:background="#fff"
                         android:gravity="right"/>
 
 
@@ -249,7 +237,7 @@
                     android:layout_height="wrap_content"
                     android:text="Commit Changes"
                     android:id="@+id/commit_change"
-                    android:background="#6e8e3a"
+                    android:background="@color/darkblue"
                     android:onClick="onClickEditfinal"
                     android:layout_marginTop="24dp"
                     android:textSize="16dp"

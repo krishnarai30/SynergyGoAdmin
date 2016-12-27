@@ -4,19 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#c4ebfc"
     tools:context="sd_dtu.synergygoadmin.MenuActivity">
 
     <Button
+        android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="NEW ALLOTMENT"
         android:id="@+id/newalbtn"
         android:onClick="onClicknew"
-
-        android:background="#FFB85F"
+        android:background="@color/darkblue"
         android:textColor="#fff"
         android:textSize="24dp"
+        android:elevation="8dp"
         style="?android:attr/borderlessButtonStyle"/>
 
     <Button
@@ -26,10 +28,11 @@
         android:text="PREVIOUS ALLOTMENT DETAILS"
         android:id="@+id/prevalbtn"
         android:onClick="onClickprev"
-
-        android:background="#FF7A5A"
+        android:layout_margin="20dp"
+        android:background="@color/darkblue"
         android:textColor="#fff"
         android:textSize="24dp"
+        android:elevation="8dp"
         style="?android:attr/borderlessButtonStyle"/>
 
     <Button
@@ -40,8 +43,9 @@
         android:text="register new agent"
         android:id="@+id/newagentbtn"
         android:onClick="onClickRegAgent"
-
-        android:background="#00AAA0"
+        android:elevation="8dp"
+        android:layout_margin="20dp"
+        android:background="@color/darkblue"
         android:textSize="24dp"
         android:textColor="#fff"
         style="?android:attr/borderlessButtonStyle"/>
