@@ -37,6 +37,9 @@ public class AgentActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        this.overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+
         setContentView(R.layout.activity_agent);
 
 
@@ -46,7 +49,7 @@ public class AgentActivity extends AppCompatActivity {
             getSupportActionBar().setTitle("Agent ID : " + agent);
             agenti = getIntent().getStringExtra("agent");
 
-            Log.d("Agent", agenti);
+//            Log.d("Agent", agenti);
 
 //        String[] entries = new String[charSequence.length];
 //        int i=0;

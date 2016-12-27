@@ -31,7 +31,9 @@ public class RegisterNewAgent extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         setContentView(R.layout.activity_register_new_agent);
+        getSupportActionBar().setTitle("Register Here");
 
     }
     public void onClickRegfinalAgent(View view){

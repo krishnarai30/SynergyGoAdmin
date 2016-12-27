@@ -23,6 +23,6 @@
     <style name="AppTheme3" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/darkblue</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colornavy</item>
+        <item name="colorAccent">#000458</item>
     </style>
 </resources>

@@ -7,8 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="sd_dtu.synergygoadmin.RegisterNewAgent"
-    android:background="@color/colorBG1">
+    tools:context="sd_dtu.synergygoadmin.RegisterNewAgent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,7 +24,7 @@
             android:textSize="30dp"
             android:gravity="center"
             android:textStyle="bold"
-            android:textColor="@color/coloryellow"
+            android:textColor="@color/darkblue"
             android:paddingBottom="60dp"
             android:fontFamily="monospace"
             />
@@ -93,12 +92,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="REGISTER"
-            android:textStyle="bold"
             android:background="@drawable/roundedbutton"
             android:textSize="16dp"
-            android:backgroundTint="@color/coloryellow"
+            android:textColor="#fff"
+            android:fontFamily="monospace"
+            android:backgroundTint="@color/darkblue"
             android:id="@+id/registerfnlbtn"
+            android:textStyle="bold"
             android:layout_marginTop="32dp"
+            android:elevation="8dp"
             android:onClick="onClickRegfinalAgent" />
 
     </LinearLayout>
