@@ -23,6 +23,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import me.anwarshahriar.calligrapher.Calligrapher;
+
 public class AgentActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
@@ -39,6 +41,9 @@ public class AgentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         this.overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+
+        Calligrapher calligrapher = new Calligrapher(this);
+        calligrapher.setFont(this,"fonts/OpenSans-Regular.ttf",true);
 
         setContentView(R.layout.activity_agent);
 

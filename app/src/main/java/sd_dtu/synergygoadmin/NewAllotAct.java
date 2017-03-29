@@ -34,6 +34,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import me.anwarshahriar.calligrapher.Calligrapher;
+
 public class NewAllotAct extends AppCompatActivity {
     EditText fileet,applicantet,contactpet,contactset,addet,landmarket,agentidet;
     Spinner addtype,agentreg;
@@ -48,6 +50,9 @@ public class NewAllotAct extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this.overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         setContentView(R.layout.activity_new_allot);
+
+        Calligrapher calligrapher = new Calligrapher(this);
+        calligrapher.setFont(this,"fonts/OpenSans-Regular.ttf",true);
 
         if(isNetworkAvailable(getApplicationContext())) {
             DatabaseReference mref1;

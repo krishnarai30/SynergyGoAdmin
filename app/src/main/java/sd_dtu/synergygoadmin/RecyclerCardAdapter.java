@@ -2,6 +2,7 @@ package sd_dtu.synergygoadmin;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -35,6 +36,19 @@ public class RecyclerCardAdapter extends RecyclerView.Adapter<RecyclerCardAdapte
     @Override
     public void onBindViewHolder(RecycViewHolder holder, int position) {
         CardData cardData = arrayList.get(position);
+
+        Typeface tf = Typeface.createFromAsset(context.getAssets(),"fonts/OpenSans-Semibold.ttf");
+
+        holder.textView1.setTypeface(tf);
+        holder.textView2.setTypeface(tf);
+        holder.textView3.setTypeface(tf);
+        holder.textView4.setTypeface(tf);
+        holder.textView5.setTypeface(tf);
+        holder.textView6.setTypeface(tf);
+        holder.textView7.setTypeface(tf);
+        holder.textView8.setTypeface(tf);
+        holder.textView9.setTypeface(tf);
+
         holder.textView1.setText(cardData.getName());
         holder.textView2.setText(cardData.getFile());
         holder.textView3.setText(cardData.getAddtype());
