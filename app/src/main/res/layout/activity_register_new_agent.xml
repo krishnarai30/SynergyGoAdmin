@@ -39,7 +39,6 @@
                 android:hint="Agent ID"
                 android:inputType="textPersonName"
                 android:id="@+id/agentemailidreget"
-                android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white" />
         </android.support.design.widget.TextInputLayout>
 
@@ -54,7 +53,6 @@
                 android:hint="Password"
                 android:id="@+id/agentpassreget"
                 android:inputType="textPassword"
-                android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white" />
         </android.support.design.widget.TextInputLayout>
         <!--<EditText-->

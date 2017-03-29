@@ -25,6 +25,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import me.anwarshahriar.calligrapher.Calligrapher;
+
 public class EditActivity extends AppCompatActivity {
 
     String agentid,uniqueid,stringaddtype,landm,file,applicant,add,contactp,contacts;
@@ -39,6 +41,10 @@ public class EditActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this.overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         setContentView(R.layout.activity_edit);
+
+        Calligrapher calligrapher = new Calligrapher(this);
+        calligrapher.setFont(this,"fonts/OpenSans-Regular.ttf",true);
+
         agentid = getIntent().getStringExtra("agent");
         uniqueid = getIntent().getStringExtra("uniid");
 

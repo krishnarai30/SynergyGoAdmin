@@ -26,6 +26,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import me.anwarshahriar.calligrapher.Calligrapher;
+
 public class PreviousAllotDetails extends AppCompatActivity {
 
     //ArrayAdapter<String> adapter;
@@ -45,6 +47,9 @@ public class PreviousAllotDetails extends AppCompatActivity {
         this.overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         setContentView(R.layout.activity_previous_allot_details);
         //final ListView agentlv=(ListView)findViewById(R.id.agentlv);
+
+        Calligrapher calligrapher = new Calligrapher(this);
+        calligrapher.setFont(this,"fonts/OpenSans-Regular.ttf",true);
 
         if(isNetworkAvailable(getApplicationContext())) {
             getSupportActionBar().setTitle("Select an Agent");

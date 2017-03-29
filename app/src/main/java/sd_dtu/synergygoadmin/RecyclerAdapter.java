@@ -2,6 +2,7 @@ package sd_dtu.synergygoadmin;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.view.CollapsibleActionView;
 import android.support.v7.widget.RecyclerView;
@@ -45,6 +46,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, int position) {
         RecyclerData recyclerData = arrayList.get(position);
+        Typeface tf = Typeface.createFromAsset(context.getAssets(),"fonts/OpenSans-Semibold.ttf");
+        holder.textView.setTypeface(tf);
         holder.textView.setText(recyclerData.getAgent());
     }
 

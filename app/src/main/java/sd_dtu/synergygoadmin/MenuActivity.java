@@ -28,18 +28,19 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import me.anwarshahriar.calligrapher.Calligrapher;
+
 public class MenuActivity extends AppCompatActivity {
 
 
 
     ArrayList<String> arrayList = new ArrayList<String>();
-    Button prevbutton;
+    Button prevbutton,newbtn,regbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final String PREFS_NAME = "MyPrefsFile";
 
-        prevbutton = (Button) findViewById(R.id.prevalbtn);
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 
@@ -61,7 +62,13 @@ public class MenuActivity extends AppCompatActivity {
         }
         this.overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
 
+        Calligrapher calligrapher = new Calligrapher(this);
+        calligrapher.setFont(this,"fonts/OpenSans-Regular.ttf",true);
         setContentView(R.layout.activity_menu);
+
+        prevbutton = (Button) findViewById(R.id.prevalbtn);
+        newbtn = (Button) findViewById(R.id.newalbtn);
+        regbtn = (Button) findViewById(R.id.newagentbtn);
 
     }
 
